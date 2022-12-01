@@ -1,16 +1,31 @@
-# ders1
+DartPad üzerinden işlenen 4.ders kodları:
+import 'package:flutter/material.dart';
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blue[100],//Color
+        appBar: AppBar(
+          title: Text('Mutlu Yıllar'),//Text
+          backgroundColor: Colors.blue[800],//Color
+        ),//Appbar
+        body: Center(
+          child: Column(
+            children: [
+              Image.network('https://static.vecteezy.com/system/resources/previews/007/955/592/original/2023-happy-new-year-s-eve-background-suitable-for-luxury-party-invitations-layout-with-luxury-numbers-clock-golden-glitter-and-confetti-vector.jpg'),
+              Row(children: [               
+                Icon(Icons.access_alarm),
+                Text('Mutlı Yıllar')
+              ],),
+              ElevatedButton(
+               child: Text('Mesaj Gönder'),
+                onPressed: (){},
+              )
+            ],
+          ),
+        )
+      ), //Scaffold
+    ), //MaterialApp
+  );
+}
